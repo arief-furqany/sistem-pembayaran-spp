@@ -1,4 +1,3 @@
-// Example for payment_menu.php (Payment Menu)
 
 <?php
 include 'includes/header.php';

@@ -1,22 +1,3 @@
-/*
-This document provides the structure for a Student SPP Payment system. 
-Each page is implemented in a separate PHP file, and the CSS provides a simple, elegant design.
-The following code demonstrates the core components of this system.
-*/
-
-// Directory Structure
-// - index.php (Landing Page)
-// - payment_menu.php (Payment Menu)
-// - confirm_payment.php (Confirm Payment)
-// - admin_dashboard.php (Admin Dashboard)
-// - edit_student.php (Edit Student Data)
-// - includes/
-//     - header.php (Header Template)
-//     - footer.php (Footer Template)
-//     - db.php (Database Connection)
-
-// Example for index.php (Landing Page)
-
 <?php
 include 'includes/header.php';
 include 'includes/db.php';
@@ -34,7 +15,7 @@ $result = mysqli_query($conn, $query);
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to SPP Payment System</h1>
+        <h1>Selamat Datang di Sistem Pembayaran SPP</h1>
         <table>
             <thead>
                 <tr>
@@ -53,7 +34,7 @@ $result = mysqli_query($conn, $query);
                         <td><?php echo $row['class']; ?></td>
                         <td><?php echo $row['payment_status'] ? 'Paid' : 'Unpaid'; ?></td>
                         <td>
-                            <a href="payment_menu.php?student_id=<?php echo $row['id']; ?>" class="btn">Pay</a>
+                            <a href="payment_menu.php?student_id=<?php echo $row['id']; ?>" class="btn">Bayar</a>
                         </td>
                     </tr>
                 <?php endwhile; ?>
@@ -63,10 +44,3 @@ $result = mysqli_query($conn, $query);
 <?php include 'includes/footer.php'; ?>
 </body>
 </html>
-
-
-
-
-
-// Include templates (header.php, footer.php, db.php)
-// Add corresponding admin pages: admin_dashboard.php, edit_student.php.
