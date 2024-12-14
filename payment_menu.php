@@ -20,7 +20,7 @@ $student = mysqli_fetch_assoc($result);
         <h1>Payment Menu</h1>
         <p>Student: <?php echo $student['name']; ?></p>
         <p>Status: <?php echo $student['payment_status'] ? 'Paid' : 'Unpaid'; ?></p>
-        <a href="confirm_payment.php?student_id=<?php echo $student_id; ?>" class="btn">Proceed to Payment</a>
+        <a href="confirm_payment.php?student_id=<?php echo $student_id; ?>" class="btn">Lakukan Pembayaran</a>
     </div>
 <?php include 'includes/footer.php'; ?>
 </body>

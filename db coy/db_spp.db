@@ -1,0 +1,32 @@
+USE db_spp;
+
+-- Tabel untuk data siswa
+CREATE TABLE students (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    nisn VARCHAR(20) NOT NULL UNIQUE,
+    class VARCHAR(50) NOT NULL,
+    payment_status TINYINT(1) DEFAULT 0, -- 0 = Unpaid, 1 = Paid
+    password VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Tabel untuk data admin
+CREATE TABLE admin_users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Data siswa
+INSERT INTO students (name, nisn, class, payment_status, password) VALUES
+('Ali Ahmad', '1234567890', '10-A', 0, MD5('password123')),
+('Dina Lestari', '0987654321', '10-B', 1, MD5('dinalestari')),
+('Budi Santoso', '1122334455', '11-A', 0, MD5('budisantoso')),
+('Citra Ayu', '5566778899', '11-B', 1, MD5('citraayu')),
+('Eko Pratama', '6677889900', '12-A', 0, MD5('ekopratama'));
+
+-- Data admin
+INSERT INTO admin_users (username, password) VALUES
+('admin', MD5('admin'));
