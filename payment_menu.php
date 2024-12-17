@@ -36,14 +36,14 @@ if (!$student) {
             <form action="confirm_payment.php" method="GET">
                 <input type="hidden" name="student_id" value="<?php echo htmlspecialchars($student['id']); ?>">
 
-                <label for="payment_method"><strong>Select Payment Method:</strong></label><br>
+                <label for="payment_method"><strong>Pilih Metode Pembayaran:</strong></label><br>
                 <select name="payment_method" id="payment_method" required>
-                    <option value="">-- Choose Payment Method --</option>
+                    <option value="">-- Pilih Metode Pembayaran --</option>
                     <option value="bank">Bank Transfer</option>
                     <option value="gopay">GoPay</option>
                 </select><br><br>
 
-                <button type="submit" class="btn">Proceed to Payment</button>
+                <button type="submit" class="btn">Lanjut ke pembayaran</button>
             </form>
         <?php else: ?>
             <p class="success">This student has already paid the SPP.</p>

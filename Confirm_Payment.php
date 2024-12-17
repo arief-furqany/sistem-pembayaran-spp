@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt->close();
 
         // Tampilkan pesan sukses
-        $success = "Pembayaran sebanyak Rp " . number_format($total_payment, 0, ',', '.') . " untuk $months_to_pay Telah berhasil diproses.";
+        $success = "Pembayaran sebanyak Rp " . number_format($total_payment, 0, ',', '.') . " untuk $months_to_pay bulan Telah berhasil diproses.";
     }
 }
 ?>
