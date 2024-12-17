@@ -6,9 +6,14 @@
     <title>Header web</title>
 </head>
 <body>
-    <hr>
+
+    <link rel="stylesheet" href="style.css">
+
+
     <footer>
     <p>@kelompok4_MPTI</p>
+    <p><a href="landing_page.php"> go to landing page </a></p>
     </footer>
+
 </body>
 </html>

@@ -1,5 +1,3 @@
-// Example for admin_dashboard.php (Admin Dashboard)
-
 <?php
 include 'includes/header.php';
 include 'includes/db.php';
@@ -20,10 +18,10 @@ $result = mysqli_query($conn, $query);
         <table>
             <thead>
                 <tr>
-                    <th>Name</th>
+                    <th>Nama</th>
                     <th>NISN</th>
-                    <th>Class</th>
-                    <th>Payment Status</th>
+                    <th>Kelas</th>
+                    <th>Status Pembayaran</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -35,7 +33,7 @@ $result = mysqli_query($conn, $query);
                         <td><?php echo $row['class']; ?></td>
                         <td><?php echo $row['payment_status'] ? 'Paid' : 'Unpaid'; ?></td>
                         <td>
-                            <a href="edit_student.php?student_id=<?php echo $row['id']; ?>" class="btn">Edit</a>
+                            <a href="edit_student.php?student_id=<?php echo $row['id']; ?>" class="btn">edit data</a>
                         </td>
                     </tr>
                 <?php endwhile; ?>
